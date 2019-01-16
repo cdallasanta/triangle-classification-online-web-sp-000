@@ -10,11 +10,11 @@ class Triangle
   def kind
     sides = [side1,side2,side3]
     if sides.any?{|side| side <= 0}
-      begin
-        raise_error
-      rescue TriangleError => error
-        puts error.message
-      end
+      #begin
+        raise TriangleError
+      #rescue TriangleError => error
+      #  puts error.message
+      #end
     elsif side1 == side2 && side2 == side3
       :equilateral
     elsif side1 == side2 || side1 == side3 || side2 == side3
